@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = GithubMergeSign::VERSION
   spec.authors       = ["Government Digital Service"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Tool to merge and GPG sign a github PR.}
+  spec.description   = %q{Tool to merge and GPG sign a github PR. This replicates the functionality of the Github merge button, adding GPG signing.}
+  spec.homepage      = "https://github.com/alphagov/paas-github_merge_sign"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
