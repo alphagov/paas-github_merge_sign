@@ -3,3 +3,11 @@ language: ruby
 rvm:
   - "2.3"
   - "2.4"
+deploy:
+  provider: rubygems
+  api_key:
+    secure: L/mmeonwxNIiMqHs1o2gw47jJOXHFChTbBxfy3anW/TFi5EipybyBXrT7dikUqgzYpzVdiomLEvJjIeR0hlt3oBGaCddpGaXF/2keEeSpOB2xhpCZIIFnUN+5g3VgVHiU5yC1SeKZzxyoA1UocHl+q0wXAcmeHhKgNpVjp98MxwLGos85BkLbqiIx8PG5nM3QWF//uVm8tO0ISkGT0inuPfNa/OThHDyHdZ1a6AqpbZHecZm1yd9FE3KkwGTQMftKrrMh/Ttv6ACCS8b6fu2x9gO+JyslJNX0D+o3rirjEgfdJqXKNmEl4vCPrzx4mpuKSamvWVNtE4ZgCoM7c8f+qHbvSCC5FyXUqPYWqsGfYma1eqsV/yMtWZCCbrUHysWoMs6F5f3+JdBWajEM8BqkvGgCJTtGQLOj6HfbvXXfDyXkMiFU/kTuDaZRD4BAKy870THLpj51jDG0fpWGdUNJVUloF6o1tOqRARBNPXmrKMWCP1fjz5irXvX9wyZpaAwOTBkQLlLUHdDRcXcRiwY5dkxUhzBXB6OcOqRLYUuP/okrgaQghK7cGv7SD/0T3+Zwie6uFgkSn7kAxfWwUHGb74yO+MbIXvDxxhKHKBvPMKOraSDUrL8Uu98UD79Jdlgn70GD/xZS5hSe9Sbmg/Irn3BNu2fBA0eEyd0LwejG6w=
+  on:
+    tags: true
+    # pin to a ruby version to prevent multiple publish attempts.
+    ruby: "2.4"
