@@ -1,5 +1,5 @@
 # Changelog
 
-## Unreleased
+## 1.0.0
 
-* Initial version
+* Initial version extracted from github.com/alphagov/paas-cf

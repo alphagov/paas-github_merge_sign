@@ -39,9 +39,9 @@ To release a new version, update the version number in
 `lib/github_merge_sign/version.rb`, update `CHANGELOG.md` and create a PR for
 this version change.
 
-Once this PR is merged, tag the merge commit with the version number, and push
-the tag. This will cause Travis to build and publish the gem to
-[rubygems.org](https://rubygems.org).
+Once this PR is merged, tag the merge commit with the version number prefixed
+with 'v' (eg 'v1.4.2'), and push the tag. This will cause Travis to build and
+publish the gem to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
