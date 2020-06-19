@@ -20,8 +20,15 @@ RSpec.describe GithubMergeSign::PullRequest do
 
   def stub_pr_details(details, options = {})
     url = "#{GithubMergeSign::PullRequest::BASE_URL}/#{repo}/pulls/1"
-    url << "?access_token=#{options[:token]}" if options[:token]
+
+    headers = {
+      'Accept'=>'*/*',
+      'User-Agent'=>'Ruby'
+    }
+    headers['Authorization'] = "token #{options[:token]}" if options[:token]
+
     WebMock.stub_request(:get, url)
+      .with(headers: headers)
       .to_return(
         headers: { "Content-Type" => "application/json" },
         body: details.to_json,
@@ -52,13 +59,9 @@ RSpec.describe GithubMergeSign::PullRequest do
     end
 
     it "should add an access token to API requests" do
-      stub_without_token = stub_pr_details("state" => "open")
       stub_with_token = stub_pr_details({ "state" => "open" }, token: "1234567890")
-
       pull_request.open?
-
       expect(stub_with_token).to have_been_requested
-      expect(stub_without_token).not_to have_been_requested
     end
   end
 
