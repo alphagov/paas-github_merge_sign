@@ -135,11 +135,9 @@ Merge pull request ##{@pr_number} from #{details.fetch('head').fetch('user').fet
 
     def http_get(url)
       uri = URI.parse(url)
-      if ENV["GITHUB_API_TOKEN"]
-        uri.query = [uri.query, "access_token=#{ENV['GITHUB_API_TOKEN']}"].compact.join('&')
-      end
       Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https') do |http|
         request = Net::HTTP::Get.new(uri.request_uri)
+        request['Authorization'] = "token #{ENV['GITHUB_API_TOKEN']}" if ENV["GITHUB_API_TOKEN"]
         return http.request(request)
       end
     end
