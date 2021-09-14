@@ -2,13 +2,12 @@ dist: focal
 sudo: false
 language: ruby
 rvm:
-  - "2.7"
+- '2.7'
 deploy:
   provider: rubygems
   api_key:
-    secure: Z/EJy7D07xm84EpEE0EbjHP4MvZqeRISfMhdwFOrdX+3q4wW0EDiSXGIBUV37tzlt2Yv2eyV7UyQbgILXOO3LsgpKA83Fdu8xrk5gjfacAANfAsce1ixn6leg1GxLIvIhUov8Uh3yZDu8kFqscHO4aW0Pq7lF8ulXUICV3fHmWEABnFrJwPMVqpQs0BYViB8T+R6u14DjB7Yahaz8+r3w6oOQQQFRld5YiMb3dovNnDdXJtDPZO/mTpGKvdyCfelwlNTf3AkTo5XWVocXIeEeH0/SC0aW+6g9Q7p5KLHExFE1j05IW7sRfu5oQwl27qmwoxpVXca9DltKZrFAeevjl2L2Cd74p1Bv8tC0OEwO3LcdaDalFSPGT5sRtO8LstjmgNU50H4DZhbgB6sewgNslnAO5OJ8VhgQzl861gYP/5PrVOzWbVNXX/3jpGvTggFKcU/x4fkbj44xK0k7y7QY/YCL8P87xlzJjTvPP1zIWPC0Bg+/pVUTuyIyPf9LBALqJtYMHVPSqqGjc0fwKnMbijb8QYqoArCI0KX+KWRLXmWs8Abg7hz9t6J17lmW2fM/s36eohDgwkR/Stfw7RIygDzZUpuDYc8kD0iiErQ2fceb7G5ty3fr0Dg1FL2XX3ESo/PhgZY/m92Gh5nFwFBNmrY2Y+H6jL3qxLB50l5hEI=
+    secure: B3uPGgxPtGExfpjUPiYGwtEndXHJUGH3/ft1/Qu8AGioUTb34rdpH2woo3xAEcBSWwbGfqmelpYmmkL3xqfkL0JgeiE4tXJ2J3pX+z8MTQRPXdsdYZvd8bv4TA229tb6prfALhyKEmCXAvUPu9BGB/nB6Peni663vZQhF9K3r1V/M6Z6WPHgQVUPse5Mjoe+uLzHhtEf8EYEwRD2GGBBxPbhLIoIZfbCvwYNTKkPRh9ReMI0LUmOiznVxpyjALXbY5TNME7CyyIrDW/coglh2G4rBMCzmpGS9YLwDevxrobU/H5GXmnDftFaAdn3So/nnnVpnxV4rZKHz/tXSoAq40ZHOvCWfXiUGvCSGWHeW/XI2ozzmZlifrryzbKJbs4MM7+ngwx5OiumeNLJdjkgAz+aPHzhXImJDZZOFff5YiJ+xy2tB0HeBlXMhq4vNt7VTbH/TbyBc+1Y+ufVl+mKkVZiuAU5bRbo/S9dI/fQwJeJLnCr3E0ZsJO9efwQZ+nus7mi7c7ZaTMEZyM7lVbRGegSHzy9UM6ipAd/KFjLOe81MZ4UTU6Sut0m3vcjK57feyDVTOHNsQinlvi6TpCYZFhW4NsRpZlfoRg/f1fku8BX1YFw7/1YGqtP+SXcUknD3Ot8IuC3++Y1S9yBj6vFDJ0fyG5ow+JP7DXaSTuf0SI=
   gem: github_merge_sign
   on:
     tags: true
-    # pin to a ruby version to prevent multiple publish attempts.
-    ruby: "2.7"
+    ruby: '2.7'
